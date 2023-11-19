@@ -21,4 +21,12 @@ offsets/4.03.js
 offsets/4.50.js 
 offsets/4.51.js 
 payloads/etaHEN-1.1b.bin
+payloads/Backup-db-PS5.bin
+payloads/Browser_appCache_remove.elf
+payloads/fan_threshold.elf
+payloads/hwinfo-tornblom.elf
+payloads/libhijacker-daemon-1.124.elf
+payloads/libhijacker-spawner-1.124.elf
+payloads/ps5-kstuff-v1.2.bin
+payloads/versions.elf
 README.md
