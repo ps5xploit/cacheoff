@@ -22,16 +22,7 @@
         }, false);
     </script>
 
-  <script>
-    if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
-    if (localStorage.passCounter == null || localStorage.passCounter == undefined) {
-      passCounter.innerHTML = localStorage.passcount;
-    }
-    if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
-    if (localStorage.failCounter == null || localStorage.failCounter == undefined) {
-      failCounter.innerHTML = localStorage.failcount;
-    }
-  </script>
+  
 </head>
 
 
@@ -159,7 +150,32 @@ for (i = 0 ; i < icons.length ; i++) { // Loop through all the icons
 document.querySelector('button').addEventListener('click', function(){
   document.querySelector('.loader').classList.toggle('oneline');
 });</script></font></div>
-<div id="counter" ><div id="progress">Pass = <span id="successCount">0</span> : Fail = <span id="failCount">0</span></div></div>
+
+
+<!-- Asegúrate de incluir esto en el <head> de tu HTML -->
+<script>
+    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
+    if (localStorage.passcount == null || localStorage.passcount == undefined) {
+        localStorage.passcount = 0;
+    }
+
+    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
+    if (localStorage.failcount == null || localStorage.failcount == undefined) {
+        localStorage.failcount = 0;
+    }
+
+    // Mostrar los valores en la interfaz
+    document.getElementById("successCount").innerHTML = localStorage.passcount;
+    document.getElementById("failCount").innerHTML = localStorage.failcount;
+</script>
+
+<!-- Asegúrate de incluir esto en el cuerpo de tu HTML -->
+<div id="counter">
+    <div id="progress">
+        Pass = <span id="successCount">0</span> : Fail = <span id="failCount">0</span>
+    </div>
+</div>
+
 
         <div id="post-jb-view" class="opacity-transition" style="width: 100%;">
          
