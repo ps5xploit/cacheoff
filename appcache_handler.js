@@ -24,12 +24,11 @@ function get_appcache_state() {
             return 'UKNOWN CACHE STATUS';
             break;
     };
-
 }
 
 function add_cache_event_toasts() {
     var appCache = window.applicationCache;
-    
+
     if (!navigator.onLine) {
         showToast('Off-line');
     }
@@ -39,9 +38,11 @@ function add_cache_event_toasts() {
     }, false);
 
     appCache.addEventListener('downloading', function (e) {
-        // Mostrar el valor actual del contador de éxito
+        // Obtener el valor actual del contador de éxito
         let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
-        showToast(`Downloading cache. Success Count: ${successCount}`);
+
+        // Guardar el valor actual del contador en el almacenamiento local
+        localStorage.setItem("successCount", successCount);
     }, false);
 
     appCache.addEventListener('error', function (e) {
@@ -52,9 +53,11 @@ function add_cache_event_toasts() {
     }, false);
 
     appCache.addEventListener('noupdate', function (e) {
-        // Mostrar el valor actual del contador de éxito
+        // Obtener el valor actual del contador de éxito
         let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
-        showToast(`Cache is up. Success Count: ${successCount}`);
+
+        // Guardar el valor actual del contador en el almacenamiento local
+        localStorage.setItem("successCount", successCount);
     }, false);
 
     appCache.addEventListener('obsolete', function (e) {
