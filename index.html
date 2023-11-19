@@ -5,21 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
 <!-- Asegúrate de incluir esto en el <head> de tu HTML -->
-<script>
-    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
-    if (localStorage.passcount == null || localStorage.passcount == undefined) {
-        localStorage.passcount = 0;
-    }
 
-    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
-    if (localStorage.failcount == null || localStorage.failcount == undefined) {
-        localStorage.failcount = 0;
-    }
-
-    // Mostrar los valores en la interfaz
-    document.getElementById("successCount").innerHTML = localStorage.passcount;
-    document.getElementById("failCount").innerHTML = localStorage.failcount;
-</script>
     <script>
         function allset() { }
     </script><script defer src="L2.js"></script>
@@ -294,5 +280,19 @@ document.querySelector('button').addEventListener('click', function(){
 <center style="position: fixed;bottom: 0;width: 100%;margin-bottom: 24px" class="info opacity-transition"
             id="credits">
 </body>
+<script>
+    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
+    if (localStorage.passcount == null || localStorage.passcount == undefined) {
+        localStorage.passcount = 0;
+    }
 
+    // Recuperar el valor almacenado en el almacenamiento local (si existe) o inicializarlo
+    if (localStorage.failcount == null || localStorage.failcount == undefined) {
+        localStorage.failcount = 0;
+    }
+
+    // Mostrar los valores en la interfaz
+    document.getElementById("successCount").innerHTML = localStorage.passcount;
+    document.getElementById("failCount").innerHTML = localStorage.failcount;
+</script>
 </html>
