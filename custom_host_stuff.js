@@ -79,5 +79,5 @@ function showToast(message) {
         toast.addEventListener('transitionend', () => {
             toast.remove();
         });
-    }, 2000);
+    }, 2500);
 }
