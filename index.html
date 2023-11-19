@@ -21,6 +21,17 @@
             }
         }, false);
     </script>
+
+  <script>
+    if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
+    if (localStorage.passCounter == null || localStorage.passCounter == undefined) {
+      passCounter.innerHTML = localStorage.passcount;
+    }
+    if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
+    if (localStorage.failCounter == null || localStorage.failCounter == undefined) {
+      failCounter.innerHTML = localStorage.failcount;
+    }
+  </script>
 </head>
 
 
