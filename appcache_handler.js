@@ -28,7 +28,6 @@ function get_appcache_state() {
 }
 
 function add_cache_event_toasts() {
-    // showToast('Appcache state: ' + get_appcache_state());
     var appCache = window.applicationCache;
     
     if (!navigator.onLine) {
@@ -39,40 +38,32 @@ function add_cache_event_toasts() {
         showToast('Finished caching site');
     }, false);
 
-    // appCache.addEventListener('checking', function (e) {
-    //     showToast('Checking for updates');
-    // }, false);
-
     appCache.addEventListener('downloading', function (e) {
-        showToast('Downloading cache');
+        // Mostrar el valor actual del contador de éxito
+        let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
+        showToast(`Downloading cache. Success Count: ${successCount}`);
     }, false);
 
     appCache.addEventListener('error', function (e) {
-        // only show error toast if we're online
+        // Solo mostrar el mensaje de error si estamos en línea
         if (navigator.onLine) {
             showToast('Error while caching site.', 5000);
         }
     }, false);
 
     appCache.addEventListener('noupdate', function (e) {
-        showToast('Cache is up');
+        // Mostrar el valor actual del contador de éxito
+        let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
+        showToast(`Cache is up. Success Count: ${successCount}`);
     }, false);
 
     appCache.addEventListener('obsolete', function (e) {
         showToast('Site is obsolete');
     }, false);
 
-    // appCache.addEventListener('progress', function (e) {
-    //     showToast('Caching site');
-    // }, false);
-
     appCache.addEventListener('updateready', function (e) {
         if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-            showToast('Site is updated. Refresh browser',8000);
+            showToast('Site is updated. Refresh browser', 8000);
         }
     }, false);
-
-
-
-
- }
+}
