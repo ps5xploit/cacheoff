@@ -24,11 +24,13 @@ function get_appcache_state() {
             return 'UKNOWN CACHE STATUS';
             break;
     };
+
 }
 
 function add_cache_event_toasts() {
+    // showToast('Appcache state: ' + get_appcache_state());
     var appCache = window.applicationCache;
-
+    
     if (!navigator.onLine) {
         showToast('Off-line');
     }
@@ -37,36 +39,40 @@ function add_cache_event_toasts() {
         showToast('Finished caching site');
     }, false);
 
-    appCache.addEventListener('downloading', function (e) {
-        // Obtener el valor actual del contador de éxito
-        let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
+    // appCache.addEventListener('checking', function (e) {
+    //     showToast('Checking for updates');
+    // }, false);
 
-        // Guardar el valor actual del contador en el almacenamiento local
-        localStorage.setItem("successCount", successCount);
+    appCache.addEventListener('downloading', function (e) {
+        showToast('Downloading cache');
     }, false);
 
     appCache.addEventListener('error', function (e) {
-        // Solo mostrar el mensaje de error si estamos en línea
+        // only show error toast if we're online
         if (navigator.onLine) {
             showToast('Error while caching site.', 5000);
         }
     }, false);
 
     appCache.addEventListener('noupdate', function (e) {
-        // Obtener el valor actual del contador de éxito
-        let successCount = parseInt(localStorage.getItem("successCount")) || parseInt(localStorage.passcount) || 0;
-
-        // Guardar el valor actual del contador en el almacenamiento local
-        localStorage.setItem("successCount", successCount);
+        showToast('Cache is up');
     }, false);
 
     appCache.addEventListener('obsolete', function (e) {
         showToast('Site is obsolete');
     }, false);
 
+    // appCache.addEventListener('progress', function (e) {
+    //     showToast('Caching site');
+    // }, false);
+
     appCache.addEventListener('updateready', function (e) {
         if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-            showToast('Site is updated. Refresh browser', 8000);
+            showToast('Site is updated. Refresh browser',8000);
         }
     }, false);
-}
+
+
+
+
+ }
