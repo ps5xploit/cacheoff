@@ -1,8 +1,10 @@
-PS5 HOST LITE JAILBREAK 4.03 4.50 4.51 AUTO etaHEN  added Pass = 0 : Fail = 0
+PS5 HOST LITE JAILBREAK 4.03 4.50 4.51 AUTO etaHEN  
 19/11/2023 added cache offline
 
 
+PKG PS5:
+https://www.mediafire.com/file/of7892c7cwp05hq/PS5XPLOIT-HOST-OFFLINE.pkg/file
 
-URL: https://ps5xploit.github.io/beta
+URL: https://ps5xploit.github.io/cacheoff
 
-https://ps5xploit.github.io/beta/
+
