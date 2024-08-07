@@ -32,7 +32,7 @@ function add_cache_event_toasts() {
     var appCache = window.applicationCache;
     
     if (!navigator.onLine) {
-        showToast('Off-line');
+        showToast('Off-line wait...');
     }
 
     appCache.addEventListener('cached', function (e) {
