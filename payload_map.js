@@ -3,7 +3,7 @@ const payload_map = [
     displayTitle: 'etaHEN',
     description: '', // Dejar "description" vacío
     info: 'Descripción de etaHEN', // Mantener "info"
-    fileName: 'etaHEN-1.9B.bin',
+    fileName: 'etaHEN-1.9B.bin.gz',
     author: 'LM',
     version: '?'
   },
