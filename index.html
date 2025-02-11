@@ -43,8 +43,6 @@
             onload_setup();
         }, false);
     </script>
-
-
  <style>
 
         a { color: white; text-decoration: none; }
@@ -179,17 +177,17 @@
         <div id="payloads"><div id="post-jb-view" class="opacity-transition" style="width: 100%;">
          
             <div id="payloads-list" class="grid-container">
-                <a class="btn mx-auto hidden-btn" id="payload-0" tabindex="0" data-info="etaHEN 2.0b by LM"  >
+                <a class="btn mx-auto hidden-btn" id="payload-0" tabindex="0" data-info="etaHEN 2.0b by LM" >
                     <p class="payload-name"></p>
                     <p class="payload-description"></p>
                     <p class="payload-author"></p>
                 </a>
-              <a class="btn mx-auto hidden-btn" id="payload-1" tabindex="0" data-info="etaHEN 1.8b by LM" >
+                <a class="btn mx-auto hidden-btn" id="payload-1" tabindex="0" data-info="etaHEN 1.8b by LM" >
                     <p class="payload-name"></p>
                     <p class="payload-description"></p>
                     <p class="payload-author"></p>
                 </a>
-                <a class="btn mx-auto hidden-btn" id="payload-2" tabindex="0" data-info="Temperature information, frequency"  >
+                <a class="btn mx-auto hidden-btn" id="payload-2" tabindex="0" data-info="Temperature information, frequency" >
                     <p class="payload-name"></p>
                     <p class="payload-description"></p>
                     <p class="payload-author"></p>
@@ -303,28 +301,6 @@
     </p></div>
 <center style="position: fixed;bottom: 0;width: 100%;margin-bottom: 24px" class="info opacity-transition"
             id="credits">
-
-<!-- auto-popupclick button for etahen 2.0b by mouuu no crashed  -->
-<script>
-    // Función para mostrar un popup independiente
-    function mostrarPopupNuevo() {
-        const mensaje = "\n🟡​ Loading etaHEN wait...\n​⚠️ Click OK when the notification disappears 🎮 ";
-
-        // Utilizamos un "alert" para mostrar el mensaje
-        alert(mensaje);
-    }
-
-    // Función para manejar el evento de clic en el botón
-    function handleClick() {
-        // Esperar 5 segundos antes de mostrar el popup
-        setTimeout(mostrarPopupNuevo, 5000);
-    }
-
-    // Obtener el botón por su id y añadir el evento de clic
-    const payloadButton = document.getElementById("payload-0");
-    payloadButton.addEventListener("click", handleClick);
-</script>
-<!-- auto-popupclick button  for etahen 2.0b by mouuu no crashed  -->
 </body>
 
 </html>
