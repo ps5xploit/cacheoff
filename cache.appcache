@@ -1,5 +1,5 @@
 CACHE MANIFEST 
-# Generated on 29/03/2025 add etahen 2.0b full 11:05 #
+# Generated on 29/04/2025 add etahen 2.1b full 11:05 #
 
 
 
@@ -32,7 +32,7 @@ rw.js
 utils.js 
 webkit.js 
 payloads\elfldr.elf
-payloads\etaHEN-20B.bin
+payloads\etaHEN-21B.bin
 payloads\hwinfo-tornblom.elf
 payloads\fan_threshold.elf
 payloads\hello_world.elf
