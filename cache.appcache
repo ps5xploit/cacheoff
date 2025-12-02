@@ -34,6 +34,7 @@ webkit.js
 payloads\elfldr.elf
 payloads\etaHEN-21B.bin
 payloads\etaHEN-22B.bin
+payloads\etaHEN-24B.bin
 payloads\hwinfo-tornblom.elf
 payloads\fan_threshold.elf
 payloads\hello_world.elf
@@ -43,3 +44,4 @@ payloads\etaHEN-18B.bin
 payloads\BackupDB.elf
 NETWORK: 
 * 
+
